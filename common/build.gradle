@@ -10,8 +10,10 @@ dependencies {
     compile "org.ow2.asm:asm-util:$asm_version"
     compile "org.ow2.asm:asm-analysis:$asm_version"
     compile "org.ow2.asm:asm-commons:$asm_version"
-    compile project(':TransformEngine')
-    compile project(':GradleToolKit')
+    implementation project(path: ':TransformEngine', configuration: 'default')
+    implementation project(path: ':GradleToolKit', configuration: 'default')
+//    compile project(':TransformEngine')
+//    compile project(':GradleToolKit')
     compile "com.google.code.gson:gson:2.8.2"
     compile group: 'dom4j', name: 'dom4j', version: '1.6.1'
     compile("com.bytedance.android.build:gradle-compat-api:$gradle_compat_version")

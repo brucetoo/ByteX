@@ -7,8 +7,8 @@ dependencies {
     compile "com.google.guava:guava:$guava_version"
     testCompile 'com.squareup.okio:okio:1.14.0'
     compile "io.reactivex.rxjava2:rxjava:2.2.6"
-    compile project(':GradleEnvApi')
-    compile project(':GradleToolKit')
+    implementation project(path: ':GradleEnvApi', configuration: 'default')
+    implementation project(path: ':GradleToolKit', configuration: 'default')
 }
 
 apply from: rootProject.file('gradle/publish.gradle')
