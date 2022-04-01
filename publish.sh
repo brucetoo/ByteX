@@ -9,6 +9,8 @@
 ##  run ./publish.sh to upload to gradle_plugins directory.
 ##  run ./publish.sh -b to upload to bintray jcenter.
 ##############################################################################
+# 控制发布的地址，正常情况下去参考 publish-maven.gradle文件，里面有逻辑
+# 是判断上传到maven/jcenter 还是本地地址
 upload2Maven=false
 useSnapshot=false
 upload2JCenter=false

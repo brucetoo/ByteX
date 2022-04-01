@@ -10,8 +10,8 @@ dependencies {
     compile "org.ow2.asm:asm-util:$asm_version"
     compile "org.ow2.asm:asm-analysis:$asm_version"
     compile "org.ow2.asm:asm-commons:$asm_version"
-    implementation project(path: ':TransformEngine', configuration: 'default')
-    implementation project(path: ':GradleToolKit', configuration: 'default')
+    compile project(path: ':TransformEngine', configuration: 'default')
+    compile project(path: ':GradleToolKit', configuration: 'default')
 //    compile project(':TransformEngine')
 //    compile project(':GradleToolKit')
     compile "com.google.code.gson:gson:2.8.2"

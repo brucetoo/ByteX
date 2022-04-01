@@ -16,7 +16,7 @@ if (!excludeApp) {
 }
 
 //common
-include ':base-plugin'
+//include ':base-plugin'
 include ':common'
 include ':TransformEngine'
 //include ':HookProguard'
@@ -53,3 +53,4 @@ include ':method-call-opt-plugin'
 //project(':coverage-lib').projectDir = new File('coverage/coverage-lib')
 
 //pull request
+include ':catch-plugin'

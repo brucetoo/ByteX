@@ -55,6 +55,7 @@ dokka {
     outputFormat = 'javadoc'
     outputDirectory = "$buildDir/javadoc"
 }
+// 执行其他脚本后，上传jar包的脚本 upload
 afterEvaluate { project ->
     uploadArchives {
         repositories {
@@ -64,7 +65,7 @@ afterEvaluate { project ->
                 pom.groupId = pomGroupId
                 pom.artifactId = pomArtifactId
                 pom.version = pomVersion
-                if (upload == 'true') {
+                if (upload == 'true') { // 默认情况下是false 开关在publish.sh里面
                     repository(url: uri(mavenUrl)) {
                         authentication(userName: uploadUserName, password: uploadPassword)
                     }
